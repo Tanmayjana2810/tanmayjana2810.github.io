@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanmay Jana - Data Analyst</title>
+  <meta name="description" content="Tanmay Jana - Data Analyst. SQL, Python, Power BI, Tableau. ETL pipelines & AI-driven analytics. M.S. Data Science @ University at Buffalo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="top">
+    <a href="#top" class="nav__brand">Tanmay&nbsp;Jana</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Toggle theme" id="themeToggle">◐</button>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <p class="hero__eyebrow">Data Analyst · Analytics &amp; Implementation Consulting · Buffalo, NY</p>
+      <h1 class="hero__title">
+        From messy pipelines to<br />
+        <span class="accent">decisions people can act on.</span>
+      </h1>
+      <p class="hero__lede">
+        I'm Tanmay - a Data Science graduate from the University at Buffalo. I build
+        end-to-end ETL pipelines, write SQL to surface patterns in large datasets,
+        and design Power BI and Tableau dashboards that make complex information easy
+        to act on. With a consulting background, I'm just as comfortable sitting with
+        clients to turn their goals into a working solution.
+      </p>
+      <p class="hero__tags">
+        SQL · Python · Power BI · Tableau · ETL Pipelines · AI-Driven Analytics
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--solid" href="#projects">View projects</a>
+        <a class="btn btn--ghost" href="Tanmay_Jana_Resume.pdf" target="_blank" rel="noopener" download>Résumé (PDF)</a>
+        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about">
+        <p>
+          I'm a Data Science graduate from the University at Buffalo who enjoys the
+          full arc of working with data - from wrangling messy pipelines to
+          translating findings into something a business stakeholder can actually use.
+        </p>
+        <p>
+          On the technical side, I've built end-to-end ETL pipelines using Python,
+          PostgreSQL, FastAPI, and Docker, written SQL to surface patterns in large
+          datasets, and developed dashboards in Power BI and Tableau that make complex
+          information easy to act on. Most recently I worked on an AI-powered Governance
+          &amp; Policy Agent - building RAG pipelines, semantic search, and compliance
+          evaluation systems that had to work on real, unstructured enterprise documents.
+        </p>
+        <p>
+          Before graduate school I worked at HighRadius as a consulting intern -
+          configuring Order-to-Cash implementations for enterprise clients, running
+          workshops and training, and supporting go-lives. That's where I learned the
+          best data work isn't just technically sound; it has to be clearly communicated
+          and tied to a business outcome. It's also why I'm drawn to analytics and
+          implementation consulting roles alongside analyst and data-engineering work -
+          the client-facing, problem-framing side of the job is one I genuinely enjoy.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects">
+
+        <!-- AMP Governance Agent -->
+        <article class="card">
+          <div class="card__top">
+            <h3>Governance &amp; Policy Agent</h3>
+            <span class="card__year">2026</span>
+          </div>
+          <p class="card__desc">
+            An explainable compliance system for the Agentic Microservices Prototyping
+            (AMP) platform. It reads structured and unstructured policy documents, extracts
+            governance rules, and evaluates compliance with confidence scoring, escalation
+            logic, and full policy traceability - so every decision traces back to its
+            source document. RAG with sentence-transformers + FAISS reached 90%+ retrieval
+            accuracy on test documents.
+          </p>
+          <ul class="card__tags">
+            <li>Python</li>
+            <li>FastAPI</li>
+            <li>RAG · FAISS</li>
+            <li>OCR</li>
+            <li>Multi-agent AI</li>
+          </ul>
+        </article>
+
+        <!-- E-Commerce ETL -->
+        <article class="card">
+          <div class="card__top">
+            <h3>E-Commerce Data System - ETL Pipeline</h3>
+            <div class="card__links">
+              <a href="https://github.com/Tanmayjana2810/DMQL-Final-Project-E-Commerce" target="_blank" rel="noopener" aria-label="GitHub repo">Code</a>
+            </div>
+          </div>
+          <p class="card__desc">
+            A complete data-engineering system: from raw CSVs (~127K rows each) to a live
+            REST API. Designed a 3NF PostgreSQL schema (6 tables, composite keys, value
+            checks), built a Python ingestion pipeline with dedup, referential-integrity
+            enforcement, and dependency-ordered loading, then wrote window-function analytics
+            and a composite index that turned nested loops into a hash join. Served via
+            FastAPI, orchestrated with Docker Compose.
+          </p>
+          <ul class="card__tags">
+            <li>Python</li>
+            <li>PostgreSQL</li>
+            <li>SQLAlchemy</li>
+            <li>FastAPI</li>
+            <li>Docker</li>
+          </ul>
+        </article>
+
+        <!-- DocuChat -->
+        <article class="card">
+          <div class="card__top">
+            <h3>DocuChat - Document Q&amp;A</h3>
+            <div class="card__links">
+              <a href="https://github.com/Tanmayjana2810" target="_blank" rel="noopener" aria-label="GitHub repo">Code</a>
+            </div>
+          </div>
+          <p class="card__desc">
+            A full-stack app that lets users upload PDFs or text and ask questions answered
+            from the document's actual content. React + TypeScript frontend with chat
+            persistence; Python/FastAPI backend using LlamaIndex for ingestion, chunking, and
+            embedding, and ChromaDB for semantic retrieval. Answers are grounded in the source,
+            with an explicit fallback when a question falls outside its scope. Containerized
+            with Docker.
+          </p>
+          <ul class="card__tags">
+            <li>React · TypeScript</li>
+            <li>FastAPI</li>
+            <li>LlamaIndex</li>
+            <li>ChromaDB</li>
+            <li>Docker</li>
+          </ul>
+        </article>
+
+        <!-- NYC Businesses -->
+        <article class="card">
+          <div class="card__top">
+            <h3>Mapping the Pulse of NYC's Businesses</h3>
+            <div class="card__links">
+              <a href="https://github.com/Tanmayjana2810" target="_blank" rel="noopener" aria-label="GitHub repo">Code</a>
+            </div>
+          </div>
+          <p class="card__desc">
+            Analysis of NYC's "Love Your Local Business" dataset (1,877 records) to understand
+            where and how small businesses cluster. Found Food &amp; Beverage dominates (871 of
+            1,877), Manhattan CBs 1-3 are the densest zones, and 403 businesses lack websites -
+            a concrete signal of who's hardest to reach online. Delivered as Tableau and Power
+            BI dashboards for non-technical audiences.
+          </p>
+          <ul class="card__tags">
+            <li>SQL</li>
+            <li>Python</li>
+            <li>Tableau</li>
+            <li>Power BI</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section" id="experience">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2>Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="timeline__date">Jan - May 2026</span>
+          <div>
+            <h3>AI &amp; Data Science Project Associate</h3>
+            <p>University at Buffalo - Experiential Learning Project · partner: Ganson Street</p>
+            <p class="timeline__note">
+              Final-semester capstone building the Agentic Microservices Prototyping (AMP)
+              platform for enterprise workflow automation. Owned the Governance &amp; Policy
+              Agent - OCR document pipelines, RAG retrieval (90%+ accuracy), and explainable
+              compliance workflows with confidence scoring and policy traceability.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__date">Jul - Nov 2023</span>
+          <div>
+            <h3>Cash Application Consultant Intern</h3>
+            <p>HighRadius Technologies - Bhubaneswar, India</p>
+            <p class="timeline__note">
+              Configured and supported deployment of Order-to-Cash solutions (Cash Application,
+              Intelligent Receivables) for enterprise clients. Onboarded payment data, implemented
+              client-specific rules, ran root-cause analysis with SQL and Excel, contributed to UAT,
+              and led client training - communicating technical concepts to non-technical stakeholders.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__date">May - Jun 2023</span>
+          <div>
+            <h3>Product Consulting Intern</h3>
+            <p>HighRadius Technologies - Bhubaneswar, India</p>
+            <p class="timeline__note">
+              Completed an intensive consulting and business-essentials program. Analyzed corporate
+              financial workflows for automation and KPI-improvement opportunities, translating
+              requirements into product configurations via a value-versus-complexity framework.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2>Skills</h2>
+      </div>
+      <div class="skills">
+        <div class="skills__group">
+          <h3>Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>R (familiar)</li>
+            <li>Bash</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Data Engineering</h3>
+          <ul>
+            <li>ETL / ELT pipelines</li>
+            <li>Cleansing &amp; validation</li>
+            <li>Dimensional modeling · 3NF</li>
+            <li>pandas · NumPy · SQLAlchemy</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Databases</h3>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>SQLite</li>
+            <li>Data warehousing</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>AI / ML</h3>
+          <ul>
+            <li>RAG · FAISS</li>
+            <li>sentence-transformers</li>
+            <li>LlamaIndex · ChromaDB</li>
+            <li>OCR · LLMs</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Cloud &amp; DevOps</h3>
+          <ul>
+            <li>Docker · Docker Compose</li>
+            <li>FastAPI · REST APIs</li>
+            <li>Git</li>
+            <li>GCP · BigQuery</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Analytics &amp; BI</h3>
+          <ul>
+            <li>Tableau · Power BI</li>
+            <li>Dashboard &amp; report design</li>
+            <li>Excel (pivots, VLOOKUP)</li>
+            <li>Regression · clustering</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Consulting</h3>
+          <ul>
+            <li>Requirements gathering</li>
+            <li>Implementation &amp; config</li>
+            <li>Client workshops · training</li>
+            <li>Go-live support · UAT</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3>Exposure</h3>
+          <ul>
+            <li>Alteryx</li>
+            <li>Snowflake</li>
+            <li>Databricks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section" id="education">
+      <div class="section__head">
+        <span class="section__num">05</span>
+        <h2>Education</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="timeline__date">2025 - 2026</span>
+          <div>
+            <h3>M.S. Engineering Science (Data Science)</h3>
+            <p>University at Buffalo (SUNY) - Buffalo, NY · GPA 3.53 / 4.0</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__date">2020 - 2024</span>
+          <div>
+            <h3>B.Tech, Computer Science &amp; Engineering</h3>
+            <p>Kalinga Institute of Industrial Technology (KIIT) - Bhubaneswar, India · CGPA 8.63 / 10</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__date">2018 - 2020</span>
+          <div>
+            <h3>Higher Secondary (PCM)</h3>
+            <p>FIITJEE - India</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--contact" id="contact">
+      <div class="section__head">
+        <span class="section__num">06</span>
+        <h2>Get in touch</h2>
+      </div>
+      <p class="contact__lede">
+        Open to Data Analyst, Business Analyst, BI Analyst, Data Engineer, and Analytics /
+        Implementation Consulting roles - and open to relocation across the US. The fastest
+        way to reach me is email.
+      </p>
+      <div class="contact__links">
+        <a class="btn btn--solid" href="mailto:tanmayjana2810@gmail.com">Email me</a>
+        <a class="btn btn--ghost" href="https://linkedin.com/in/tanmayjana2810" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn--ghost" href="https://github.com/Tanmayjana2810" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Tanmay Jana · Buffalo, NY · Built with plain HTML &amp; CSS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

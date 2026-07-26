@@ -1,0 +1,275 @@
+/* ============================================================
+   Tanmay Jana — Portfolio
+   Clean, minimal, typography-forward. No frameworks.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
+
+:root {
+  --bg:        #fbfbf9;
+  --surface:   #ffffff;
+  --text:      #1a1a1a;
+  --muted:     #6b6b6b;
+  --line:      #e6e4de;
+  --accent:    #2f6d5b;   /* muted teal-green */
+  --accent-2:  #d9ede6;
+  --shadow:    0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+  --radius:    14px;
+  --maxw:      880px;
+}
+
+:root[data-theme="dark"] {
+  --bg:        #101312;
+  --surface:   #191d1c;
+  --text:      #eceae4;
+  --muted:     #9a9a94;
+  --line:      #2a2f2d;
+  --accent:    #6fc4a8;
+  --accent-2:  #1e2b27;
+  --shadow:    0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background .3s ease, color .3s ease;
+}
+
+/* ---------- NAV ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem clamp(1.2rem, 5vw, 3rem);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav__brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: var(--text);
+  letter-spacing: -.02em;
+}
+.nav__links {
+  margin-left: auto;
+  display: flex;
+  gap: 1.4rem;
+}
+.nav__links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 500;
+  transition: color .2s;
+}
+.nav__links a:hover { color: var(--accent); }
+.nav__toggle {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 8px;
+  width: 34px; height: 34px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: border-color .2s, transform .2s;
+}
+.nav__toggle:hover { border-color: var(--accent); transform: rotate(20deg); }
+
+/* ---------- LAYOUT ---------- */
+main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.2rem, 5vw, 2rem); }
+
+.hero {
+  padding: clamp(4rem, 12vw, 8rem) 0 clamp(3rem, 8vw, 5rem);
+}
+.hero__eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.hero__title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  margin-bottom: 1.4rem;
+}
+.hero__title .accent { color: var(--accent); }
+.hero__lede {
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+.hero__tags {
+  font-size: .82rem;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: .01em;
+  margin-bottom: 2rem;
+}
+.hero__cta { display: flex; gap: .8rem; flex-wrap: wrap; }
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: .95rem;
+  text-decoration: none;
+  transition: transform .15s ease, background .2s, border-color .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--solid { background: var(--accent); color: #fff; }
+:root[data-theme="dark"] .btn--solid { color: #08110d; }
+.btn--ghost { border: 1px solid var(--line); color: var(--text); }
+.btn--ghost:hover { border-color: var(--accent); }
+
+/* ---------- SECTIONS ---------- */
+.section { padding: clamp(3rem, 8vw, 5rem) 0; border-top: 1px solid var(--line); }
+.section__head {
+  display: flex;
+  align-items: baseline;
+  gap: .8rem;
+  margin-bottom: 2rem;
+}
+.section__num {
+  color: var(--accent);
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.section__head h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  letter-spacing: -.01em;
+}
+
+/* ---------- ABOUT ---------- */
+.about { max-width: 38rem; }
+.about p { margin-bottom: 1rem; color: var(--muted); font-size: 1.05rem; }
+.about em { color: var(--accent); font-style: normal; }
+
+/* ---------- SKILLS ---------- */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+.skills__group h3 {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--accent);
+  margin-bottom: .8rem;
+}
+.skills__group ul { list-style: none; }
+.skills__group li {
+  padding: .35rem 0;
+  color: var(--text);
+  font-size: .98rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+/* ---------- PROJECTS ---------- */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, border-color .2s;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: .7rem;
+}
+.card__top h3 { font-size: 1.15rem; letter-spacing: -.01em; }
+.card__year { font-size: .8rem; color: var(--muted); flex-shrink: 0; font-weight: 500; }
+.card__links { display: flex; gap: .8rem; flex-shrink: 0; }
+.card__links a {
+  font-size: .8rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.card__links a:hover { text-decoration: underline; }
+.card__desc { color: var(--muted); font-size: .95rem; margin-bottom: 1rem; flex-grow: 1; }
+.card__tags { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; }
+.card__tags li {
+  font-size: .75rem;
+  background: var(--accent-2);
+  color: var(--accent);
+  padding: .25rem .6rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline { display: flex; flex-direction: column; gap: 1.8rem; }
+.timeline__item {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1.2rem;
+}
+.timeline__date { color: var(--accent); font-weight: 600; font-size: .9rem; padding-top: .1rem; }
+.timeline__item h3 { font-size: 1.05rem; margin-bottom: .2rem; }
+.timeline__item h3 em { color: var(--muted); font-weight: 400; font-size: .8rem; }
+.timeline__item p { color: var(--muted); font-size: .95rem; }
+.timeline__note { margin-top: .4rem; font-size: .88rem !important; opacity: .9; }
+
+/* ---------- CONTACT ---------- */
+.contact__lede { max-width: 34rem; color: var(--muted); font-size: 1.1rem; margin-bottom: 1.6rem; }
+.contact__links { display: flex; gap: .8rem; flex-wrap: wrap; }
+
+/* ---------- FOOTER ---------- */
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 2rem clamp(1.2rem, 5vw, 3rem);
+  text-align: center;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 620px) {
+  .nav__links { display: none; }
+  .timeline__item { grid-template-columns: 1fr; gap: .3rem; }
+  .card__top { flex-direction: column; }
+}
+
+/* ---------- MOTION ---------- */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
