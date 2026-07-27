@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tanmay Jana - Data Analyst</title>
-  <meta name="description" content="Tanmay Jana - Data Analyst. SQL, Python, Power BI, Tableau. ETL pipelines & AI-driven analytics. M.S. Data Science @ University at Buffalo." />
+  <meta name="description" content="Tanmay Jana - Data Analyst. SQL, Python, Power BI, Tableau. ETL pipelines and AI-driven analytics. M.S. Data Science, University at Buffalo." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -26,25 +26,48 @@
   <main>
     <!-- ===================== HERO ===================== -->
     <section class="hero">
-      <p class="hero__eyebrow">Data Analyst · Analytics &amp; Implementation Consulting · Buffalo, NY</p>
+      <p class="hero__eyebrow">Data Analyst · Analytics &amp; Implementation Consulting</p>
       <h1 class="hero__title">
         From messy pipelines to<br />
         <span class="accent">decisions people can act on.</span>
       </h1>
       <p class="hero__lede">
         I'm Tanmay - a Data Science graduate from the University at Buffalo. I build
-        end-to-end ETL pipelines, write SQL to surface patterns in large datasets,
-        and design Power BI and Tableau dashboards that make complex information easy
-        to act on. With a consulting background, I'm just as comfortable sitting with
-        clients to turn their goals into a working solution.
-      </p>
-      <p class="hero__tags">
-        SQL · Python · Power BI · Tableau · ETL Pipelines · AI-Driven Analytics
+        end-to-end ETL pipelines, write SQL to surface patterns in large datasets, and
+        design Power BI and Tableau dashboards that make complex information easy to act
+        on. With a consulting background, I'm just as comfortable sitting with clients to
+        turn their goals into a working solution.
       </p>
       <div class="hero__cta">
         <a class="btn btn--solid" href="#projects">View projects</a>
         <a class="btn btn--ghost" href="Tanmay_Jana_Resume.pdf" target="_blank" rel="noopener" download>Résumé (PDF)</a>
         <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      </div>
+      <ul class="facts">
+        <li>Buffalo, NY</li>
+        <li>Open to relocation across the US</li>
+        <li>M.S. Data Science, UB</li>
+        <li>Open to Analyst &amp; Consulting roles</li>
+      </ul>
+    </section>
+
+    <!-- ===================== STATS ===================== -->
+    <section class="stats" aria-label="Key results">
+      <div class="stat">
+        <span class="stat__num">90%+</span>
+        <span class="stat__label">Policy retrieval accuracy on test documents</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">127K+</span>
+        <span class="stat__label">Rows per table cleaned and ingested</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">1,877</span>
+        <span class="stat__label">NYC business records analyzed</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">6</span>
+        <span class="stat__label">Table 3NF schema designed from raw CSVs</span>
       </div>
     </section>
 
@@ -56,9 +79,9 @@
       </div>
       <div class="about">
         <p>
-          I'm a Data Science graduate from the University at Buffalo who enjoys the
-          full arc of working with data - from wrangling messy pipelines to
-          translating findings into something a business stakeholder can actually use.
+          I'm a Data Science graduate from the University at Buffalo who enjoys the full
+          arc of working with data - from wrangling messy pipelines to translating findings
+          into something a business stakeholder can actually use.
         </p>
         <p>
           On the technical side, I've built end-to-end ETL pipelines using Python,
@@ -71,11 +94,11 @@
         <p>
           Before graduate school I worked at HighRadius as a consulting intern -
           configuring Order-to-Cash implementations for enterprise clients, running
-          workshops and training, and supporting go-lives. That's where I learned the
-          best data work isn't just technically sound; it has to be clearly communicated
-          and tied to a business outcome. It's also why I'm drawn to analytics and
-          implementation consulting roles alongside analyst and data-engineering work -
-          the client-facing, problem-framing side of the job is one I genuinely enjoy.
+          workshops and training, and supporting go-lives. That's where I learned the best
+          data work isn't just technically sound; it has to be clearly communicated and
+          tied to a business outcome. It's also why I'm drawn to analytics and
+          implementation consulting roles alongside analyst and data-engineering work - the
+          client-facing, problem-framing side of the job is one I genuinely enjoy.
         </p>
       </div>
     </section>
@@ -86,74 +109,147 @@
         <span class="section__num">02</span>
         <h2>Projects</h2>
       </div>
+      <p class="section__lede">
+        Each one framed the way I'd walk a stakeholder through it: what the problem was,
+        what I built, and what it actually produced.
+      </p>
+
       <div class="projects">
 
-        <!-- AMP Governance Agent -->
-        <article class="card">
-          <div class="card__top">
-            <h3>Governance &amp; Policy Agent</h3>
-            <span class="card__year">2026</span>
+        <!-- Governance Agent -->
+        <article class="proj">
+          <div class="proj__head">
+            <div>
+              <span class="proj__kicker">AI / RAG</span>
+              <h3>Governance &amp; Policy Agent</h3>
+            </div>
+            <span class="proj__year">2026</span>
           </div>
-          <p class="card__desc">
-            An explainable compliance system for the Agentic Microservices Prototyping
-            (AMP) platform. It reads structured and unstructured policy documents, extracts
-            governance rules, and evaluates compliance with confidence scoring, escalation
-            logic, and full policy traceability - so every decision traces back to its
-            source document. RAG with sentence-transformers + FAISS reached 90%+ retrieval
-            accuracy on test documents.
-          </p>
+          <dl class="proj__cai">
+            <div>
+              <dt>Challenge</dt>
+              <dd>
+                Organizations need documents checked against policy, but real policy
+                documents are unstructured - and a black-box yes/no answer isn't auditable.
+              </dd>
+            </div>
+            <div>
+              <dt>Approach</dt>
+              <dd>
+                Built OCR-enabled document processing and chunking pipelines, then
+                Retrieval-Augmented Generation with sentence-transformers and FAISS for
+                context-aware policy retrieval. Wrapped it in REST APIs with confidence
+                scoring, escalation logic, and policy traceability.
+              </dd>
+            </div>
+            <div>
+              <dt>Impact</dt>
+              <dd>
+                90%+ retrieval accuracy on test documents, with every compliance decision
+                traceable back to the source document that justified it.
+              </dd>
+            </div>
+          </dl>
           <ul class="card__tags">
             <li>Python</li>
             <li>FastAPI</li>
-            <li>RAG · FAISS</li>
+            <li>FAISS</li>
+            <li>sentence-transformers</li>
             <li>OCR</li>
-            <li>Multi-agent AI</li>
+            <li>SQLite</li>
           </ul>
         </article>
 
         <!-- E-Commerce ETL -->
-        <article class="card">
-          <div class="card__top">
-            <h3>E-Commerce Data System - ETL Pipeline</h3>
-            <div class="card__links">
-              <a href="https://github.com/Tanmayjana2810/DMQL-Final-Project-E-Commerce" target="_blank" rel="noopener" aria-label="GitHub repo">Code</a>
+        <article class="proj">
+          <div class="proj__head">
+            <div>
+              <span class="proj__kicker">Data Engineering</span>
+              <h3>E-Commerce Data System - End-to-End ETL</h3>
+            </div>
+            <div class="proj__meta">
+              <span class="proj__year">2025</span>
+              <a href="https://github.com/Tanmayjana2810/DMQL-Final-Project-E-Commerce" target="_blank" rel="noopener">Code →</a>
             </div>
           </div>
-          <p class="card__desc">
-            A complete data-engineering system: from raw CSVs (~127K rows each) to a live
-            REST API. Designed a 3NF PostgreSQL schema (6 tables, composite keys, value
-            checks), built a Python ingestion pipeline with dedup, referential-integrity
-            enforcement, and dependency-ordered loading, then wrote window-function analytics
-            and a composite index that turned nested loops into a hash join. Served via
-            FastAPI, orchestrated with Docker Compose.
-          </p>
+          <dl class="proj__cai">
+            <div>
+              <dt>Challenge</dt>
+              <dd>
+                Five raw CSVs of roughly 127,595 rows each - duplicates, orphaned foreign
+                keys, and untyped timestamps, with no usable schema underneath.
+              </dd>
+            </div>
+            <div>
+              <dt>Approach</dt>
+              <dd>
+                Designed a 3NF PostgreSQL schema of 6 tables with a composite primary key on
+                order items and value-level checks. Built a Python pipeline that dedupes,
+                type-converts, filters orphaned rows, derives the sellers table, and loads in
+                dependency order - then wrote CTE and window-function analytics on top and
+                served it through a FastAPI REST layer.
+              </dd>
+            </div>
+            <div>
+              <dt>Impact</dt>
+              <dd>
+                Replaced a correlated subquery with a single-pass join plus a composite
+                index, shifting the query plan from repeated nested loops to a hash join.
+                The entire stack - Postgres, ingestion, and API - comes up with one Docker
+                Compose command.
+              </dd>
+            </div>
+          </dl>
           <ul class="card__tags">
             <li>Python</li>
-            <li>PostgreSQL</li>
+            <li>pandas</li>
             <li>SQLAlchemy</li>
+            <li>PostgreSQL</li>
             <li>FastAPI</li>
             <li>Docker</li>
           </ul>
         </article>
 
         <!-- DocuChat -->
-        <article class="card">
-          <div class="card__top">
-            <h3>DocuChat - Document Q&amp;A</h3>
-            <div class="card__links">
-              <a href="https://github.com/Tanmayjana2810" target="_blank" rel="noopener" aria-label="GitHub repo">Code</a>
+        <article class="proj">
+          <div class="proj__head">
+            <div>
+              <span class="proj__kicker">Full-Stack AI</span>
+              <h3>DocuChat - Document Q&amp;A System</h3>
+            </div>
+            <div class="proj__meta">
+              <span class="proj__year">2026</span>
+              <a href="https://github.com/Tanmayjana2810" target="_blank" rel="noopener">Code →</a>
             </div>
           </div>
-          <p class="card__desc">
-            A full-stack app that lets users upload PDFs or text and ask questions answered
-            from the document's actual content. React + TypeScript frontend with chat
-            persistence; Python/FastAPI backend using LlamaIndex for ingestion, chunking, and
-            embedding, and ChromaDB for semantic retrieval. Answers are grounded in the source,
-            with an explicit fallback when a question falls outside its scope. Containerized
-            with Docker.
-          </p>
+          <dl class="proj__cai">
+            <div>
+              <dt>Challenge</dt>
+              <dd>
+                People need answers from their own documents without the model quietly
+                inventing facts that were never in the source.
+              </dd>
+            </div>
+            <div>
+              <dt>Approach</dt>
+              <dd>
+                React and TypeScript frontend with file upload and chat that persists across
+                refreshes. Python and FastAPI backend parsing PDF and text, using LlamaIndex
+                for ingestion, chunking, and embedding, and ChromaDB as the vector store for
+                semantic retrieval.
+              </dd>
+            </div>
+            <div>
+              <dt>Impact</dt>
+              <dd>
+                Answers stay grounded in the uploaded document, with an explicit fallback
+                response when a question falls outside its scope. Containerized with Docker.
+              </dd>
+            </div>
+          </dl>
           <ul class="card__tags">
-            <li>React · TypeScript</li>
+            <li>React</li>
+            <li>TypeScript</li>
             <li>FastAPI</li>
             <li>LlamaIndex</li>
             <li>ChromaDB</li>
@@ -162,20 +258,43 @@
         </article>
 
         <!-- NYC Businesses -->
-        <article class="card">
-          <div class="card__top">
-            <h3>Mapping the Pulse of NYC's Businesses</h3>
-            <div class="card__links">
-              <a href="https://github.com/Tanmayjana2810" target="_blank" rel="noopener" aria-label="GitHub repo">Code</a>
+        <article class="proj">
+          <div class="proj__head">
+            <div>
+              <span class="proj__kicker">Analytics &amp; BI</span>
+              <h3>Mapping the Pulse of NYC's Businesses</h3>
+            </div>
+            <div class="proj__meta">
+              <span class="proj__year">2025</span>
+              <a href="https://github.com/Tanmayjana2810" target="_blank" rel="noopener">Code →</a>
             </div>
           </div>
-          <p class="card__desc">
-            Analysis of NYC's "Love Your Local Business" dataset (1,877 records) to understand
-            where and how small businesses cluster. Found Food &amp; Beverage dominates (871 of
-            1,877), Manhattan CBs 1-3 are the densest zones, and 403 businesses lack websites -
-            a concrete signal of who's hardest to reach online. Delivered as Tableau and Power
-            BI dashboards for non-technical audiences.
-          </p>
+          <dl class="proj__cai">
+            <div>
+              <dt>Challenge</dt>
+              <dd>
+                1,877 business records across 19 columns, with no clear picture of where or
+                how small businesses actually cluster across the city.
+              </dd>
+            </div>
+            <div>
+              <dt>Approach</dt>
+              <dd>
+                SQL and Python analysis across category, borough, community board, and
+                neighborhood - then translated the findings into Tableau and Power BI
+                dashboards built for non-technical audiences.
+              </dd>
+            </div>
+            <div>
+              <dt>Impact</dt>
+              <dd>
+                Food &amp; Beverage dominates at 871 of 1,877 businesses; Manhattan holds
+                34.2% and Brooklyn 31.3%, with Community Boards 1-3 the densest commercial
+                zones. Surfaced 403 businesses with no website and 229 with no phone number -
+                a concrete list of who is hardest to reach online.
+              </dd>
+            </div>
+          </dl>
           <ul class="card__tags">
             <li>SQL</li>
             <li>Python</li>
@@ -193,45 +312,71 @@
         <span class="section__num">03</span>
         <h2>Experience</h2>
       </div>
-      <div class="timeline">
-        <div class="timeline__item">
-          <span class="timeline__date">Jan - May 2026</span>
-          <div>
-            <h3>AI &amp; Data Science Project Associate</h3>
-            <p>University at Buffalo - Experiential Learning Project · partner: Ganson Street</p>
-            <p class="timeline__note">
-              Final-semester capstone building the Agentic Microservices Prototyping (AMP)
-              platform for enterprise workflow automation. Owned the Governance &amp; Policy
-              Agent - OCR document pipelines, RAG retrieval (90%+ accuracy), and explainable
-              compliance workflows with confidence scoring and policy traceability.
-            </p>
+
+      <div class="roles">
+        <article class="role">
+          <div class="role__head">
+            <div>
+              <h3>AI &amp; Data Science Project Associate</h3>
+              <p class="role__org">University at Buffalo - Experiential Learning · partner: Ganson Street</p>
+            </div>
+            <span class="role__date">Jan - May 2026</span>
           </div>
-        </div>
-        <div class="timeline__item">
-          <span class="timeline__date">Jul - Nov 2023</span>
-          <div>
-            <h3>Cash Application Consultant Intern</h3>
-            <p>HighRadius Technologies - Bhubaneswar, India</p>
-            <p class="timeline__note">
-              Configured and supported deployment of Order-to-Cash solutions (Cash Application,
-              Intelligent Receivables) for enterprise clients. Onboarded payment data, implemented
-              client-specific rules, ran root-cause analysis with SQL and Excel, contributed to UAT,
-              and led client training - communicating technical concepts to non-technical stakeholders.
-            </p>
+          <ul class="role__points">
+            <li>Built components of an Agentic Microservices Prototyping platform for enterprise workflow automation using Python, FastAPI, SQLite, and multi-agent AI architectures.</li>
+            <li>Owned the Governance &amp; Policy Agent - OCR document processing and chunking pipelines feeding RAG retrieval with sentence-transformers and FAISS.</li>
+            <li>Designed governance decision workflows with confidence scoring, escalation logic, and policy traceability, reaching 90%+ retrieval accuracy on test documents.</li>
+          </ul>
+          <ul class="card__tags">
+            <li>Python</li>
+            <li>FastAPI</li>
+            <li>RAG</li>
+            <li>FAISS</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role__head">
+            <div>
+              <h3>Cash Application Consultant Intern</h3>
+              <p class="role__org">HighRadius Technologies - Bhubaneswar, India</p>
+            </div>
+            <span class="role__date">Jul - Nov 2023</span>
           </div>
-        </div>
-        <div class="timeline__item">
-          <span class="timeline__date">May - Jun 2023</span>
-          <div>
-            <h3>Product Consulting Intern</h3>
-            <p>HighRadius Technologies - Bhubaneswar, India</p>
-            <p class="timeline__note">
-              Completed an intensive consulting and business-essentials program. Analyzed corporate
-              financial workflows for automation and KPI-improvement opportunities, translating
-              requirements into product configurations via a value-versus-complexity framework.
-            </p>
+          <ul class="role__points">
+            <li>Configured and supported deployment of Order-to-Cash solutions, including Cash Application and Intelligent Receivables, for enterprise clients.</li>
+            <li>Onboarded client payment data and implemented client-specific business rules, partnering with technical and business stakeholders to resolve integration issues.</li>
+            <li>Used SQL and Excel to map, validate, and clean O2C datasets across multiple client engagements, running root cause analysis to diagnose why issues occurred rather than just patching them.</li>
+            <li>Contributed to user acceptance testing, maintained implementation documentation, and delivered status updates supporting client sign-off and go-live.</li>
+            <li>Ran client interactions and training sessions, communicating complex technical concepts to non-technical stakeholders.</li>
+          </ul>
+          <ul class="card__tags">
+            <li>SQL</li>
+            <li>Excel</li>
+            <li>O2C Implementation</li>
+            <li>UAT</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role__head">
+            <div>
+              <h3>Product Consulting Intern</h3>
+              <p class="role__org">HighRadius Technologies - Bhubaneswar, India</p>
+            </div>
+            <span class="role__date">May - Jun 2023</span>
           </div>
-        </div>
+          <ul class="role__points">
+            <li>Completed an intensive consulting and business-essentials program.</li>
+            <li>Analyzed corporate financial workflows to identify automation, digital transformation, and KPI improvement opportunities.</li>
+            <li>Translated business requirements into functional product configurations through client-facing case studies, applying a value-versus-complexity framework.</li>
+          </ul>
+          <ul class="card__tags">
+            <li>Requirements Gathering</li>
+            <li>Case Studies</li>
+            <li>Stakeholder Comms</li>
+          </ul>
+        </article>
       </div>
     </section>
 
@@ -361,6 +506,7 @@
         <a class="btn btn--solid" href="mailto:tanmayjana2810@gmail.com">Email me</a>
         <a class="btn btn--ghost" href="https://linkedin.com/in/tanmayjana2810" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn--ghost" href="https://github.com/Tanmayjana2810" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn--ghost" href="Tanmay_Jana_Resume.pdf" target="_blank" rel="noopener" download>Résumé</a>
       </div>
     </section>
   </main>
